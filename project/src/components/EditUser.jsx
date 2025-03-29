@@ -22,7 +22,7 @@ function EditUser() {
   });
 
   useEffect(() => {
-    // Simulating API call with Indian user data
+   
     const indianUsers = {
       1: { first_name: 'Arjun', last_name: 'Patel', email: 'arjun.patel@example.com' },
       2: { first_name: 'Priya', last_name: 'Sharma', email: 'priya.sharma@example.com' },
@@ -44,7 +44,7 @@ function EditUser() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Validate form fields
+  
     if (!user.first_name.trim() || !user.last_name.trim() || !user.email.trim()) {
       toast.error('All fields are required');
       return;
@@ -57,7 +57,7 @@ function EditUser() {
       return;
     }
 
-    // Update the user in the parent component
+   
     const userList = JSON.parse(localStorage.getItem('users') || '[]');
     const updatedUsers = userList.map(u => {
       if (u.id === parseInt(id)) {
